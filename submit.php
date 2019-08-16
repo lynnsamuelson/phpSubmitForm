@@ -4,7 +4,7 @@
     $email = $_POST['email'];
     $words = htmlentities($_POST['words']);
 
-    $mysqli = new mysqli("localhost", "root", "WNS2+=mt;v&<f5?g", "sys");
+    $mysqli = new mysqli("localhost", <user>, <password>, "sys");
     try {
         if($mysqli){
             $sql = "INSERT INTO sys.contactform (name, email, words) VALUES (?, ?, ?)";
