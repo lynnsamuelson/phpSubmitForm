@@ -1,0 +1,52 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/6.2.2/css/app.css">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<div class="row">
+    <div class="large-6 medium-8 columns small-centered contact-wrapper">
+      <h2 class="text-center white hello">Oh, hello.</h2>
+      <div id="messageShell" style="display:none;">
+        <p>How about a newsletter?</p>
+
+        <form class="move" action="." method="POST">
+          <div class="row">
+            <div class="medium-6 columns">
+              <div class="new-btn" ontouchend="this.onclick=fix">
+                <a href="#" id="subscribeBtn" class="draw">Yes, Please</a>
+              </div>
+            </div>
+            <div class="medium-6 columns">
+              <div class="new-btn" ontouchend="this.onclick=fix">
+                <a href="#" id="noThanksBtn" class="draw">No Thanks</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="error" style="display:none;">
+        <p>There was an error submitting your form.  Please try again later.</p>
+      </div>
+
+      <form action="/foxfuel/submit.php" method="post" id="contactForm" class="text-center ffc-form move" novalidate="novalidate">
+        <label class="show-for-ie-9" for="name">Name:</label>
+        <input id="contactName" required="" type="text" name="name" value="" placeholder="Name" aria-required="true">
+        <label class="show-for-ie-9" for="email">Email:</label>
+        <input id="contactEmail" type="text" name="email" placeholder="Email" required="" aria-required="true">
+        <label class="show-for-ie-9" for="words">Words:</label>
+        <textarea id="contactMessage" type="text" name="words" placeholder="Words" required="" aria-required="true"></textarea>
+        <div class="new-btn" ontouchend="this.onclick=fix">
+          <a href="#" id="contactBtn" class="draw">Send</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  <!-- Foundation with jQuery CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/6.2.2/js/vendor/jquery.js"></script>
+  <script src="form.js"></script>
+  
+  </body>
+
+
+
